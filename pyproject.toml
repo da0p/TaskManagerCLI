@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "task-manager"
+version = "0.1.0"
+description = "A simple task manager project"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+[tool.poetry.scripts]
+task-manager = "app.main:main"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.4.1"
+
+[tool.pytest.ini_options]
+pythonpath = [
+    ".",
+    "task_manager"
+]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+
+[tool.black]
+line-length = 88
+
